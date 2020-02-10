@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production --config webpack.config.js --progress --colors",
-    "start": "webpack --mode=development --config webpack.config.js --watch",
-    "server": "webpack-dev-server --open"
+    "dev": "webpack --mode=development --config webpack.config.js --watch",
+    "server": "webpack-dev-server --open",
+    "start": "node server.js"
   },
   "author": "Ayron Felipe",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2"
