@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/style.css';
-import Select from './Select';
+import Filter from './Filters'
+
 
 function Main(){
 
@@ -23,6 +24,10 @@ function Main(){
         {'value': 8, 'label': 'Thai'},
     ])
 
+    useEffect(() => {
+
+    }, [])
+
     return(
         <>
             <div className="page-information">
@@ -31,22 +36,7 @@ function Main(){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="divider"></div>
-                <div className="filters">
-                    <span>Filter by:</span>
-                    <span className="filter">
-                        <input type="radio" id="open-now" className="open-now" name="open_now" />
-                        <label htmlFor="open-now">Open Now</label>
-                    </span>
-                    <span className="filter">
-                        <Select options={prices} name="price" first="Price" />
-                    </span>
-                    <span className="filter">
-                        <Select options={categories} name="category" first="Categories" />
-                    </span>
-                    <span className="filter clear-all">
-                        <button type="button" className="btn-disabled">Clear All</button>
-                    </span>
-                </div>
+                <Filter />
                 <div className="divider"></div>
             </div>
         </>
