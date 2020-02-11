@@ -1,18 +1,21 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react';
+import '../styles/dropdown.css';
 
-
-function Select({ options }) {
+function Select({ options, name, first }) {
 
     return(
-        <ul style={{ listStyle: 'none' }}>
-            {options.map((option) => 
-                <li key={option.value}>
-                    <input type="radio" id={`radio-${option.value}`} />
-                    <label htmlFor={`radio-${option.value}`}>{option.label}</label>
-                </li>
-            )}
-        </ul>
-    )
+        <div className="dropdown">
+            <span>{first}</span>
+            <div className="dropdown-content">
+                {options.map((option) =>
+                    <div key={option.value}>
+                        <input type="radio" id={`radio-${option.value}`} name={name} />
+                        <label htmlFor={`radio-${option.value}`}>{option.label}</label>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
 }
 
 export default Select;

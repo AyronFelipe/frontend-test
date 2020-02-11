@@ -38,10 +38,10 @@ function Main(){
                         <label htmlFor="open-now">Open Now</label>
                     </span>
                     <span className="filter">
-                        <Select options={prices} />
+                        <Select options={prices} name="price" first="Price" />
                     </span>
                     <span className="filter">
-                        <Select options={categories} />
+                        <Select options={categories} name="category" first="Categories" />
                     </span>
                     <span className="filter clear-all">
                         <button type="button" className="btn-disabled">Clear All</button>
