@@ -1,10 +1,13 @@
 import React from 'react';
 import '../styles/style.css'
+import Main from './Main';
 
 function App(){
 
     return(
-        <h1>Restaurants</h1>
+        <div id="root">
+            <Main />
+        </div>
     )
 }
 
