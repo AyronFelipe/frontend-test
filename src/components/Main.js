@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/style.css';
-import Filters from './Filters'
+import Filters from './Filters';
+import Restaurants from './Restaurants';
 
 
 function Main(){
@@ -15,6 +16,7 @@ function Main(){
                 <div className="divider"></div>
                 <Filters />
                 <div className="divider"></div>
+                <Restaurants />
             </div>
         </>
     );

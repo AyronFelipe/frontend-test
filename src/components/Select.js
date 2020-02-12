@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useImperativeHandle, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/dropdown.css';
 
 const Select = ({ options, name, first, changeButton, def, clear, setClear }) => {
