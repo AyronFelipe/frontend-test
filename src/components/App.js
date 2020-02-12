@@ -1,12 +1,15 @@
 import React from 'react';
-import '../styles/style.css'
+import { Route } from 'react-router-dom';
 import Main from './Main';
+import DetailRestaurant from './DetailRestaurant'
+import '../styles/style.css'
 
 function App(){
 
     return(
         <div id="root">
-            <Main />
+            <Route exact path="/" component={Main} />
+            <Route exact path="/detail" component={DetailRestaurant} />
         </div>
     )
 }

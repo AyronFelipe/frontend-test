@@ -1,5 +1,6 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
+import { Link } from 'react-router-dom';
 import '../styles/style.css';
 import '../styles/restaurants.css';
 
@@ -33,9 +34,11 @@ function Restaurants() {
                             </div>
                         </div>
                         <div style={{ paddingTop: '10px' }} className="card-restaurant-button">
-                            <button type="button" className="btn-primary">
-                                learn more
-                            </button>
+                            <Link to={`/detail/`}>
+                                <button type="button" className="btn-primary">
+                                    learn more
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
