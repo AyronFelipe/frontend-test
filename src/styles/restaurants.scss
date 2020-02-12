@@ -1,3 +1,37 @@
+$width-card: 304px;
+$height-card: 228px;
+$margin-left: 70px;
+
 .restaurants {
     padding-top: 45px;
+}
+
+.cards {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .card-restaurant {
+        &:nth-child(n+2) {
+            margin-left: $margin-left;
+        }
+    }
+}
+
+.card-restaurant {
+    width: $width-card;
+    height: auto;
+    .card-restaurant-image {
+        height: $height-card;
+    }
+    .card-restaurant-title {
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+    .card-restaurant-detail {
+        padding-top: 15px;
+    }
 }

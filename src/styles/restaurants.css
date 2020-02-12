@@ -1,4 +1,42 @@
 .restaurants {
   padding-top: 45px;
 }
+
+.cards {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.cards .card-restaurant:nth-child(n+2) {
+  margin-left: 70px;
+}
+
+.card-restaurant {
+  width: 304px;
+  height: auto;
+}
+
+.card-restaurant .card-restaurant-image {
+  height: 228px;
+}
+
+.card-restaurant .card-restaurant-title {
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+.card-restaurant .card-restaurant-detail {
+  padding-top: 15px;
+}
 /*# sourceMappingURL=restaurants.css.map */
