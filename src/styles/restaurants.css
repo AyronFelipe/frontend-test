@@ -29,7 +29,14 @@
 }
 
 .card-restaurant .card-restaurant-image {
+  opacity: 1;
   height: 228px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.card-restaurant .card-restaurant-image:hover {
+  opacity: 0.5;
 }
 
 .card-restaurant .card-restaurant-detail {

@@ -109,6 +109,10 @@ body {
           justify-content: center;
 }
 
+.btn-primary:hover {
+  background-color: #004891;
+}
+
 .divider {
   background: #E6E6E6;
   height: 1px;

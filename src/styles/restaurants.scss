@@ -22,7 +22,12 @@ $margin-left: 70px;
     padding: 40px 20px 20px 20px;
     box-sizing: border-box;
     .card-restaurant-image {
+        opacity: 1;
         height: $height-card;
+        transition: .5s ease;
+        &:hover {
+            opacity: 0.5;
+        }
     }
     .card-restaurant-detail {
         padding-top: 15px;

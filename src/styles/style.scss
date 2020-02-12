@@ -92,6 +92,9 @@ body {
     text-transform: uppercase;
     border: solid 1px #002B56;
     justify-content: center;
+    &:hover {
+        background-color: #004891;
+    }
   }
 
 .divider {
