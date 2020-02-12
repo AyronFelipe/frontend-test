@@ -28,15 +28,15 @@
   height: 228px;
 }
 
-.card-restaurant .card-restaurant-title {
-  padding-top: 20px;
+.card-restaurant .card-restaurant-detail {
+  padding-top: 15px;
+  height: 116px;
+}
+
+.card-restaurant .card-restaurant-detail .card-restaurant-title {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 1px;
-}
-
-.card-restaurant .card-restaurant-detail {
-  padding-top: 15px;
 }
 /*# sourceMappingURL=restaurants.css.map */

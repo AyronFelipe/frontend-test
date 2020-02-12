@@ -24,14 +24,14 @@ $margin-left: 70px;
     .card-restaurant-image {
         height: $height-card;
     }
-    .card-restaurant-title {
-        padding-top: 20px;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 1px;
-    }
     .card-restaurant-detail {
         padding-top: 15px;
+        height: 116px;
+        .card-restaurant-title {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 1px;
+        }
     }
 }
