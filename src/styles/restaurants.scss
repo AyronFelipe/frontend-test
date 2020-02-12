@@ -9,18 +9,18 @@ $margin-left: 70px;
 .cards {
     padding-top: 20px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    .card-restaurant {
-        &:nth-child(n+2) {
-            margin-left: $margin-left;
-        }
-    }
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 .card-restaurant {
     width: $width-card;
     height: auto;
+    flex-basis: 20%;
+    -ms-flex: auto;
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
     .card-restaurant-image {
         height: $height-card;
     }
@@ -57,6 +57,10 @@ $margin-left: 70px;
         font-size: 40px;
         color: #008EA4;
     }
+    .dot-closed {
+        font-size: 40px;
+        color: #FF3548
+    }
     .open-text {
         color: #757575;
         font-size: 12px;
@@ -74,5 +78,29 @@ $margin-left: 70px;
     justify-content: center;
     .btn-enabled {
         width: 416px;
+    }
+}
+
+@media(max-width: 1333px) {
+    .card-restaurant {
+        flex-basis: 33.33%;
+    }
+}
+
+@media(max-width: 1073px) {
+    .card-restaurant {
+        flex-basis: 33.33%;
+    }
+}
+
+@media(max-width: 815px) {
+    .card-restaurant {
+        flex-basis: 50%;
+    }
+}
+
+@media(max-width: 555px) {
+    .card-restaurant {
+        flex-basis: 100%;
     }
 }

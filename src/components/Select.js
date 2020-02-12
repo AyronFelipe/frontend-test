@@ -22,16 +22,16 @@ const Select = ({ options, name, first, changeButton, def, clear, setClear }) =>
             <span>{first}</span>
             <div className="dropdown-content">
                 {options.map((option) =>
-                    <div key={option.value} onClick={(e) => changeButton(e)}>
+                    <div key={option.alias} onClick={(e) => changeButton(e)}>
                         <input 
                             type="radio"
-                            id={`radio-${name}-${option.value}`}
+                            id={`radio-${name}-${option.alias}`}
                             name={name}
-                            value={option.value}
+                            value={option.alias}
                             className="radio"
                             onChange={(e) => handleChange(e)} />
-                        <label htmlFor={`radio-${name}-${option.value}`}>
-                            {option.label}
+                        <label htmlFor={`radio-${name}-${option.alias}`}>
+                            {option.title}
                         </label>
                     </div>
                 )}
