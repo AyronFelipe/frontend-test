@@ -40,6 +40,9 @@ function Restaurants() {
                     </div>
                 </div>
             </div>
+            <div className="load-more">
+                <button className="btn-enabled">LOAD MORE</button>
+            </div>
         </div>
     );
 };

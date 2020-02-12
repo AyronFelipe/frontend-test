@@ -66,3 +66,13 @@ $margin-left: 70px;
         text-transform: uppercase;
     }
 }
+
+.load-more {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn-enabled {
+        width: 416px;
+    }
+}
