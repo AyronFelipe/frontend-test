@@ -29,7 +29,6 @@ function Main(){
         loadRestaurants();
     }, [])
 
-    console.log(categories);
     return(
         <>
             <div className="page-information">

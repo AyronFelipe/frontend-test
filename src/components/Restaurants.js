@@ -13,7 +13,7 @@ function Restaurants({ restaurants }) {
                 { restaurants.map((restaurant) =>
                     <div className="card-restaurant" key={restaurant.id}>
                         <div className="card-restaurant-image">
-                            <img src={restaurant.image_url} alt="Image restaurant" style={{ width: '304px', height: '228px' }} />
+                            <img src={restaurant.image_url} alt="Image restaurant" style={{ width: '100%', height: '228px' }} />
                         </div>
                         <div className="card-restaurant-detail">
                             <div className="card-restaurant-title">

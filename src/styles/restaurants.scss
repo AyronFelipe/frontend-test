@@ -1,4 +1,4 @@
-$width-card: 304px;
+$width-card: 500px;
 $height-card: 228px;
 $margin-left: 70px;
 
@@ -16,10 +16,10 @@ $margin-left: 70px;
 .card-restaurant {
     width: $width-card;
     height: auto;
-    flex-basis: 20%;
+    flex-basis: 25%;
     -ms-flex: auto;
     position: relative;
-    padding: 50px;
+    padding: 40px 20px 20px 20px;
     box-sizing: border-box;
     .card-restaurant-image {
         height: $height-card;
@@ -81,26 +81,21 @@ $margin-left: 70px;
     }
 }
 
-@media(max-width: 1333px) {
+@media(max-width: 1719px) {
     .card-restaurant {
         flex-basis: 33.33%;
     }
 }
 
-@media(max-width: 1073px) {
-    .card-restaurant {
-        flex-basis: 33.33%;
-    }
-}
-
-@media(max-width: 815px) {
+@media(max-width: 1315px) {
     .card-restaurant {
         flex-basis: 50%;
     }
 }
 
-@media(max-width: 555px) {
+@media(max-width: 788px) {
     .card-restaurant {
         flex-basis: 100%;
+        justify-content: center;
     }
 }

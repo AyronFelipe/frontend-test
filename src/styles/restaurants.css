@@ -17,13 +17,13 @@
 }
 
 .card-restaurant {
-  width: 304px;
+  width: 500px;
   height: auto;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   -ms-flex: auto;
   position: relative;
-  padding: 50px;
+  padding: 40px 20px 20px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -100,31 +100,27 @@
   width: 416px;
 }
 
-@media (max-width: 1333px) {
+@media (max-width: 1719px) {
   .card-restaurant {
     -ms-flex-preferred-size: 33.33%;
         flex-basis: 33.33%;
   }
 }
 
-@media (max-width: 1073px) {
-  .card-restaurant {
-    -ms-flex-preferred-size: 33.33%;
-        flex-basis: 33.33%;
-  }
-}
-
-@media (max-width: 815px) {
+@media (max-width: 1315px) {
   .card-restaurant {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
 }
 
-@media (max-width: 555px) {
+@media (max-width: 788px) {
   .card-restaurant {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=restaurants.css.map */
