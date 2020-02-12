@@ -1,7 +1,7 @@
 import React from 'react';
+import StarRatings from 'react-star-ratings';
 import '../styles/style.css';
 import '../styles/restaurants.css';
-
 
 function Restaurants() {
 
@@ -17,7 +17,16 @@ function Restaurants() {
                         <div className="card-restaurant-title">
                             Very Long Name Restaurants Number 1 In List
                         </div>
-                        <div style={{ paddingTop: '10px' }}>
+                        <div className="card-restaurant-stars">
+                            <StarRatings
+                                rating={4}
+                                starDimension={'20px'}
+                                starSpacing={'1px'}
+                                starRatedColor={'#002B56'} />
+                        </div>
+                        <div className="card-restaurant-meta">
+                        </div>
+                        <div style={{ paddingTop: '10px' }} className="card-restaurant-button">
                             <button type="button" className="btn-primary">
                                 learn more
                             </button>
