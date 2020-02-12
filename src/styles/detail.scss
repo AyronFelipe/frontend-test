@@ -1,0 +1,15 @@
+.restaurant-detail {
+    width: 1920px;
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-detail-meta {
+    margin-top: 20px;
+    .category {
+        width: 90%;
+    }
+    .open {
+        width: 10%
+    }
+}
