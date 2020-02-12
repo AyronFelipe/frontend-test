@@ -12,7 +12,7 @@ const Select = ({ options, name, first, changeButton, def, clear, setClear }) =>
         }
     }, [clear])
 
-    function algumaCoisa(e){
+    function handleChange(e){
         def(e);
         setClear(false);
     }
@@ -29,7 +29,7 @@ const Select = ({ options, name, first, changeButton, def, clear, setClear }) =>
                             name={name}
                             value={option.value}
                             className="radio"
-                            onChange={(e) => algumaCoisa(e)} />
+                            onChange={(e) => handleChange(e)} />
                         <label htmlFor={`radio-${name}-${option.value}`}>
                             {option.label}
                         </label>
