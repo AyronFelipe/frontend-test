@@ -25,6 +25,12 @@ function Restaurants() {
                                 starRatedColor={'#002B56'} />
                         </div>
                         <div className="card-restaurant-meta">
+                            <div className="category">
+                                <span>THAI • $$$$</span>
+                            </div>
+                            <div className="open">
+                                <p className="open-text"><span className="dot">•</span> open now</p>
+                            </div>
                         </div>
                         <div style={{ paddingTop: '10px' }} className="card-restaurant-button">
                             <button type="button" className="btn-primary">

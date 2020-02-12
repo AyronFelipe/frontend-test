@@ -39,4 +39,38 @@
   line-height: 28px;
   letter-spacing: 1px;
 }
+
+.card-restaurant .card-restaurant-detail .card-restaurant-meta {
+  padding-top: 16px;
+}
+
+.category {
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  float: left;
+  width: 152px;
+}
+
+.open {
+  float: left;
+  width: 152px;
+}
+
+.open .dot {
+  font-size: 40px;
+  color: #008EA4;
+}
+
+.open .open-text {
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=restaurants.css.map */
