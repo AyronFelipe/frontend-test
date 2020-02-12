@@ -5,29 +5,6 @@ import Filter from './Filters'
 
 function Main(){
 
-    const [prices, setPrices] = useState([
-        {'value': 1, 'label': 'All'},
-        {'value': 2, 'label': '$'},
-        {'value': 3, 'label': '$$'},
-        {'value': 4, 'label': '$$$'},
-        {'value': 5, 'label': '$$$$'},
-    ]);
-
-    const [categories, setCategories] = useState([
-        {'value': 1, 'label': 'All'},
-        {'value': 2, 'label': 'Italian'},
-        {'value': 3, 'label': 'Seafood'},
-        {'value': 4, 'label': 'Steakhouses'},
-        {'value': 5, 'label': 'Japanese'},
-        {'value': 6, 'label': 'American'},
-        {'value': 7, 'label': 'Mexican'},
-        {'value': 8, 'label': 'Thai'},
-    ])
-
-    useEffect(() => {
-
-    }, [])
-
     return(
         <>
             <div className="page-information">
