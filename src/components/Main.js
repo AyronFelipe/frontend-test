@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/style.css';
-import Filter from './Filters'
+import Filters from './Filters'
 
 
 function Main(){
@@ -13,7 +13,7 @@ function Main(){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="divider"></div>
-                <Filter />
+                <Filters />
                 <div className="divider"></div>
             </div>
         </>
