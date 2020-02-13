@@ -7,7 +7,6 @@ import Reviews from './Reviews';
 function DetailRestaurant() {
 
     const [restaurant, setRestaurant] = useState('');
-    const [id, setId] = useState('');
     const [reviews, setReviews] = useState([]);
 
     function getId() {
