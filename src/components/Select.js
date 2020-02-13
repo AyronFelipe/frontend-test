@@ -22,7 +22,7 @@ const Select = ({ options, name, first, changeButton, def, clear, setClear }) =>
             <span>{first}</span>
             <div className="dropdown-content">
                 {options.map((option) =>
-                    <div key={option.alias} onClick={(e) => changeButton(e)}>
+                    <div key={option.alias} onClick={(e) => changeButton(e)} className="option">
                         <input 
                             type="radio"
                             id={`radio-${name}-${option.alias}`}

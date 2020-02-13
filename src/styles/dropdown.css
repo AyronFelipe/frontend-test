@@ -11,9 +11,22 @@
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
+  z-index: 100;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.option {
+  padding: 5px;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+.radio {
+  margin-right: 7px;
 }
 /*# sourceMappingURL=dropdown.css.map */
