@@ -7,15 +7,30 @@ import Reviews from './Reviews';
 function DetailRestaurant() {
 
     const [restaurant, setRestaurant] = useState('');
+    const [id, setId] = useState('');
+    const [reviews, setReviews] = useState([]);
 
-    useEffect(() => {
+    function getId() {
         const url = window.location.href;
         const restaurantId = url.split(`/`)[4];
+        return restaurantId;
+    }
+
+    useEffect(() => {
         async function loadRestaurant(){
-            const obj = await api.get(`businesses/${restaurantId}`)
+            const obj = await api.get(`businesses/${getId()}`)
             setRestaurant(obj.data)
         }
         loadRestaurant();
+
+    }, [])
+    
+    useEffect(() => {
+        async function loadReviews(){
+            const obj = await api.get(`businesses/${getId()}/reviews`);
+            setReviews(obj.data.reviews);
+        }
+        loadReviews();
     }, [])
     
     return(
@@ -55,7 +70,7 @@ function DetailRestaurant() {
             </div>
             <div className="restaurant-detail-reviews">
                 <div className="reviews-number">{ restaurant.review_count } Reviews</div>
-                <Reviews />
+                <Reviews reviews={reviews} />
             </div>
         </div>
     );
