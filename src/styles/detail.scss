@@ -13,3 +13,49 @@
         width: 10%
     }
 }
+
+.restaurant-detail-map-image {
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: auto;
+    p {
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+}
+
+.restaurant-detail-reviews {
+    margin-top: 75px;
+    margin-left: 10px;
+    .reviews-number {
+        color: #666666;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.9px;
+    }
+}
+
+.restaurant-detail-map {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.restaurant-detail-image {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+@media(max-width: 918px) {
+    .restaurant-detail-map {
+        flex-basis: 100%;
+    }
+    .restaurant-detail-image {
+        flex-basis: 100%;
+    }
+}

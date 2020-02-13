@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import StarRatings from 'react-star-ratings';
 import "../styles/detail.css";
 import api from "../utils/api";
+import Reviews from './Reviews';
 
 function DetailRestaurant() {
 
@@ -34,6 +35,27 @@ function DetailRestaurant() {
                 <div className="open">
                     { restaurant.is_closed ? <p className="open-text"><span className="dot">•</span> closed</p> : <p className="open-text"><span className="dot">•</span> open now</p> }
                 </div>
+            </div>
+            <div className="restaurant-detail-map-image">
+                <div className="restaurant-detail-map">
+                    {
+                        restaurant.location != undefined ?
+                        <iframe
+                            frameBorder="0" style={{ border: '0', width: '100%', height: '100%' }}
+                            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.API_GOOGLE_MAPS}&q=${restaurant.coordinates.latitude},${restaurant.coordinates.longitude}`} allowFullScreen>
+                        </iframe>
+                        :
+                        <p>Load map</p>
+                    }
+                </div>
+                <div className="restaurant-detail-image">
+                    <img src={restaurant.image_url} alt="" style={{ width: '100%', height: '100%' }} />
+                </div>
+                { restaurant.location != undefined ? <p>{ restaurant.location.address1 } { restaurant.location.city }, { restaurant.location.state } { restaurant.location.zip_code }</p> : <p>Load location</p> }
+            </div>
+            <div className="restaurant-detail-reviews">
+                <div className="reviews-number">{ restaurant.review_count } Reviews</div>
+                <Reviews />
             </div>
         </div>
     );
