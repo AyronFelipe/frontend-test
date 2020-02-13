@@ -1,3 +1,44 @@
 .reviews {
     margin-top: 40px;
+    .review {
+        padding-top: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        height: auto;
+    }
+}
+
+.avatar {
+    flex-basis: 20%;
+    .profile-name {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+    }
+    .profile-date {
+        color: #666666;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+.review-detail {
+    flex-basis: 80%;
+    .review-text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 700px) {
+    .avatar {
+        flex-basis: 100%;
+    }
+    .review-detail {
+        flex-basis: 100%;
+    }
 }

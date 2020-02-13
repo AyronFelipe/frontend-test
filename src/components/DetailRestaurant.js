@@ -64,7 +64,7 @@ function DetailRestaurant() {
                     }
                 </div>
                 <div className="restaurant-detail-image">
-                    <img src={restaurant.image_url} alt="" style={{ width: '100%', height: '100%' }} />
+                    <img src={restaurant.image_url} alt="" style={{ width: '100%', height: '355px' }} />
                 </div>
                 { restaurant.location != undefined ? <p>{ restaurant.location.address1 } { restaurant.location.city }, { restaurant.location.state } { restaurant.location.zip_code }</p> : <p>Load location</p> }
             </div>
