@@ -3,7 +3,7 @@ import Select from './Select';
 import '../styles/style.css';
 
 
-function Filters({ categories, filterOpen, filterPrice, filterCategory }) {
+function Filters({ categories, filterOpen, filterPrice, filterCategory, clearAll }) {
 
     const [prices, setPrices] = useState([
         {'alias': 'All', 'title': 'All'},
@@ -30,6 +30,7 @@ function Filters({ categories, filterOpen, filterPrice, filterCategory }) {
         setDisabled(true);
         setChecked(false);
         setClear(true);
+        clearAll();
     }
 
     function def(e) {

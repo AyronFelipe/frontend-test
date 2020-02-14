@@ -56,6 +56,11 @@ function Main(){
         setRestaurants(filter);
     }
 
+    async function clearAll() {
+        const obj = await api.get('businesses/search?location=lasvegas');
+        setRestaurants(obj.data.businesses);
+    }
+
     return(
         <>
             <div className="page-information">
@@ -64,7 +69,7 @@ function Main(){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="divider"></div>
-                <Filters categories={categories} filterOpen={filterOpen} filterPrice={filterPrice} filterCategory={filterCategory} />
+                <Filters categories={categories} filterOpen={filterOpen} filterPrice={filterPrice} filterCategory={filterCategory} clearAll={clearAll} />
                 <div className="divider"></div>
                 <Restaurants restaurants={restaurants} />
             </div>
