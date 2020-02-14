@@ -21,20 +21,25 @@ const Select = ({ options, name, first, changeButton, def, clear, setClear }) =>
         <div className="dropdown">
             <span>{first}</span>
             <div className="dropdown-content">
-                {options.map((option) =>
-                    <div key={option.alias} onClick={(e) => changeButton(e)} className="option">
-                        <input 
-                            type="radio"
-                            id={`radio-${name}-${option.alias}`}
-                            name={name}
-                            value={option.alias}
-                            className="radio"
-                            onChange={(e) => handleChange(e)} />
-                        <label htmlFor={`radio-${name}-${option.alias}`}>
-                            {option.title}
-                        </label>
-                    </div>
-                )}
+                {
+                    options != undefined ?
+                        options.map((option) =>
+                            <div key={option.alias} onClick={(e) => changeButton(e)} className="option">
+                                <input 
+                                    type="radio"
+                                    id={`radio-${name}-${option.alias}`}
+                                    name={name}
+                                    value={option.alias}
+                                    className="radio"
+                                    onChange={(e) => handleChange(e)} />
+                                <label htmlFor={`radio-${name}-${option.alias}`}>
+                                    {option.title}
+                                </label>
+                            </div>
+                        )
+                    :
+                    null
+                }
             </div>
         </div>
     );

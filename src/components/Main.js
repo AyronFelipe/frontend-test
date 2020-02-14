@@ -3,23 +3,29 @@ import '../styles/style.css';
 import Filters from './Filters';
 import Restaurants from './Restaurants';
 import api from '../utils/api';
-import categories from '../utils/variables';
+//import categories from '../utils/variables';
 
 
 function Main(){
 
-    //const [categories, setCategories] = useState(categories);
+    const [categories, setCategories] = useState(categories);
     const [restaurants, setRestaurants] = useState([]);
 
-    /*
     useEffect(() => {
         async function loadCategories(){
+            let listCategories = [];
             const obj = await api.get('categories')
-            setCategories(obj.data.categories);
+            obj.data.categories.map((cat) => {
+                cat.parent_aliases.map((parent_alias) => {
+                    if (parent_alias === 'restaurants') {
+                        listCategories.push(cat)
+                    }
+                })
+            })
+            setCategories(listCategories);
         }
         loadCategories();
     }, [])
-    */
 
     useEffect(() => {
         async function loadRestaurants() {
