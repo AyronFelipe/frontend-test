@@ -6,7 +6,7 @@ const api = axios.create({
     baseURL: URL,
     timeout: 30000,
     headers: {
-        Authorization: 'Bearer 3fOrwJMwKIC-DQvO3FRnptUV7n5FFYXrdwfv7gNkOuwa0zTQy6N2PcYsMAR_a14AuHlNWAtxU8d3QZ9HspeADA58aNbMDGa9qHK-_917hcuoJfxVNahHuSyvkT5EXnYx',
+        Authorization: 'Bearer ' + process.env.API_KEY,
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     }

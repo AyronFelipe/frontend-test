@@ -56,7 +56,7 @@ function DetailRestaurant() {
                         restaurant.location != undefined ?
                         <iframe
                             frameBorder="0" style={{ border: '0', width: '100%', height: '100%' }}
-                            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDMHF6lWPUwa-9YtF9HnoMSdJ1-FzYeYt4&q=${restaurant.coordinates.latitude},${restaurant.coordinates.longitude}`} allowFullScreen>
+                            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.API_GOOGLE_MAPS}&q=${restaurant.coordinates.latitude},${restaurant.coordinates.longitude}`} allowFullScreen>
                         </iframe>
                         :
                         <p>Load map</p>
