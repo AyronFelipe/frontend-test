@@ -29,6 +29,33 @@ function Main(){
         loadRestaurants();
     }, [])
 
+    function filterOpen() {
+        let filter = restaurants.filter((restaurant) => {
+            return restaurant.is_closed === false
+        });
+        setRestaurants(filter);
+    }
+
+    function filterPrice(price) {
+        let filter = restaurants.filter((restaurant) => {
+            return restaurant.price === price
+        });
+        setRestaurants(filter);
+    }
+
+    function filterCategory(categoryFilter) {
+        let filter = []
+        restaurants.filter((restaurant) => {
+            restaurant.categories.map((category) => {
+                let isEqual = category.alias === categoryFilter
+                if (isEqual) {
+                    filter.push(restaurant)
+                }
+            })
+        });
+        setRestaurants(filter);
+    }
+
     return(
         <>
             <div className="page-information">
@@ -37,7 +64,7 @@ function Main(){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="divider"></div>
-                <Filters categories={categories} />
+                <Filters categories={categories} filterOpen={filterOpen} filterPrice={filterPrice} filterCategory={filterCategory} />
                 <div className="divider"></div>
                 <Restaurants restaurants={restaurants} />
             </div>

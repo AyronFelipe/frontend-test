@@ -1,12 +1,12 @@
 const categories = [
-    {'alias': 1, 'title': 'All'},
-    {'alias': 2, 'title': 'Italian'},
-    {'alias': 3, 'title': 'Seafood'},
-    {'alias': 4, 'title': 'Steakhouses'},
-    {'alias': 5, 'title': 'Japanese'},
-    {'alias': 6, 'title': 'American'},
-    {'alias': 7, 'title': 'Mexican'},
-    {'alias': 8, 'title': 'Thai'},
+    {'alias': 'all', 'title': 'All'},
+    {'alias': 'italian', 'title': 'Italian'},
+    {'alias': 'seafood', 'title': 'Seafood'},
+    {'alias': 'steakhouses', 'title': 'Steakhouses'},
+    {'alias': 'japanese', 'title': 'Japanese'},
+    {'alias': 'newamerican', 'title': 'American'},
+    {'alias': 'mexican', 'title': 'Mexican'},
+    {'alias': 'thai', 'title': 'Thai'},
 ];
 
 export default categories;

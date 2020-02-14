@@ -111,6 +111,7 @@ body {
 
 .btn-primary:hover {
   background-color: #004891;
+  border: solid 1px #004891;
 }
 
 .divider {

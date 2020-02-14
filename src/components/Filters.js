@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Select from './Select';
 import '../styles/style.css';
 
 
-function Filters({ categories }) {
+function Filters({ categories, filterOpen, filterPrice, filterCategory }) {
 
     const [prices, setPrices] = useState([
-        {'alias': 1, 'title': 'All'},
-        {'alias': 2, 'title': '$'},
-        {'alias': 3, 'title': '$$'},
-        {'alias': 4, 'title': '$$$'},
-        {'alias': 5, 'title': '$$$$'},
+        {'alias': 'All', 'title': 'All'},
+        {'alias': '$', 'title': '$'},
+        {'alias': '$$', 'title': '$$'},
+        {'alias': '$$$', 'title': '$$$'},
+        {'alias': '$$$$', 'title': '$$$$'},
     ]);
 
     const [buttonClass, setButtonClass] = useState('btn-disabled');
@@ -36,6 +36,23 @@ function Filters({ categories }) {
         e.target.name == 'price' ? setPrice(e.target.value) : setCategory(e.target.value);
     }
 
+    function handleChangeOpen() {
+        setChecked(true);
+        filterOpen();
+    }
+
+    useEffect(() => {
+        if (price != undefined) {
+            filterPrice(price);
+        }
+    }, [price])
+
+    useEffect(() => {
+        if (category != undefined) {
+            filterCategory(category);
+        }
+    }, [category])
+
     return(
         <div className="filters">
             <span>Filter by:</span>
@@ -47,7 +64,7 @@ function Filters({ categories }) {
                     name="open_now"
                     onClick={() => changeButton()}
                     checked={checked}
-                    onChange={() => setChecked(true)} />
+                    onChange={() => handleChangeOpen()} />
                 <label htmlFor="open-now">Open Now</label>
             </span>
             <span className="filter">

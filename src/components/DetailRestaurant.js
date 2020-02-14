@@ -62,8 +62,8 @@ function DetailRestaurant() {
                         <p>Load map</p>
                     }
                 </div>
-                <div className="restaurant-detail-image">
-                    <img src={restaurant.image_url} alt="" style={{ width: '100%', height: '355px' }} />
+                <div className="restaurant-detail-image" style={{ maxHeight: '355px' }}>
+                    <img src={restaurant.image_url} alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
                 { restaurant.location != undefined ? <p>{ restaurant.location.address1 } { restaurant.location.city }, { restaurant.location.state } { restaurant.location.zip_code }</p> : <p>Load location</p> }
             </div>
